@@ -1,7 +1,7 @@
 {
   "name": "passmarket-adapter",
   "version": "1.0.0",
-  "description": "PassMarket Console",
+  "description": "PassMarket Adapter",
   "author": "jiyuujin <jiyuujinunite@gmail.com>",
   "private": true,
   "type": "module",
