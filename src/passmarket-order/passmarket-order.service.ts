@@ -20,21 +20,21 @@ export class PassmarketOrderService extends ScraperPage {
       waitUntil: 'domcontentloaded',
     });
     await page.type(
-      Selectors.ORDERS.SEARCH_INPUT_ID,
+      Selectors.ORDERS.PASSMARKET.SEARCH_INPUT_ID,
       this.envService.PASSMARKET_BASIC_ID,
     );
     await Promise.all([
       page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      page.click(Selectors.ORDERS.NEXT_EXECUTE),
+      page.click(Selectors.ORDERS.PASSMARKET.NEXT_EXECUTE),
     ]);
 
     // await page.type(
-    //   Selectors.ORDERS.SEARCH_INPUT_PASSWORD,
+    //   Selectors.ORDERS.PASSMARKET.SEARCH_INPUT_PASSWORD,
     //   this.envService.PASSMARKET_BASIC_PASSWORD,
     // );
     // await Promise.all([
     //   page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-    //   page.click(Selectors.ORDERS.SEARCH_EXECUTE),
+    //   page.click(Selectors.ORDERS.PASSMARKET.SEARCH_EXECUTE),
     // ]);
   }
 
@@ -51,7 +51,7 @@ export class PassmarketOrderService extends ScraperPage {
       behavior: 'allow',
       downloadPath: path.resolve(__dirname, '../../download'),
     });
-    await page.click(Selectors.ORDERS.DOWNLOAD_EXECUTE);
+    await page.click(Selectors.ORDERS.PASSMARKET.DOWNLOAD_EXECUTE);
   }
 
   async getOrders() {
