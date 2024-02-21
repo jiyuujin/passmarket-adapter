@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.19.0]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install packages
+        uses: ./.github/actions/install-packages
+
+      - name: After purchase
+        run: pnpm start:after-purchase-cmd
