@@ -9,7 +9,7 @@ import {
 } from '../puppeteer/puppeteer.service';
 import { AfterPurchaseCommand } from './after-purchase.command';
 import { configuration } from '../env/utils';
-import { EnvModule } from 'src/env/env.module';
+import { EnvModule } from '../env/env.module';
 
 @Module({
   imports: [
