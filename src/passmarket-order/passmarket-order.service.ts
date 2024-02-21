@@ -19,7 +19,10 @@ export class PassmarketOrderService extends ScraperPage {
     await page.goto(Constants.PASSMARKET_LOGIN_URL, {
       waitUntil: 'domcontentloaded',
     });
-    await page.type(Selectors.ORDERS.SEARCH_INPUT_ID, this.envService.BASIC_ID);
+    await page.type(
+      Selectors.ORDERS.SEARCH_INPUT_ID,
+      this.envService.PASSMARKET_BASIC_ID,
+    );
     await Promise.all([
       page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
       page.click(Selectors.ORDERS.NEXT_EXECUTE),
@@ -27,7 +30,7 @@ export class PassmarketOrderService extends ScraperPage {
 
     // await page.type(
     //   Selectors.ORDERS.SEARCH_INPUT_PASSWORD,
-    //   this.envService.BASIC_PASSWORD,
+    //   this.envService.PASSMARKET_BASIC_PASSWORD,
     // );
     // await Promise.all([
     //   page.waitForNavigation({ waitUntil: 'domcontentloaded' }),

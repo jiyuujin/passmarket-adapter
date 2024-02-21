@@ -17,11 +17,11 @@ export class EnvService {
     return this.configService.getOrThrow('passmarketEventId');
   }
 
-  get BASIC_ID() {
-    return this.configService.getOrThrow('basicId');
+  get PASSMARKET_BASIC_ID() {
+    return this.configService.getOrThrow('passmarketBasicId');
   }
 
-  get BASIC_PASSWORD() {
-    return this.configService.getOrThrow('basicPassword');
+  get PASSMARKET_BASIC_PASSWORD() {
+    return this.configService.getOrThrow('passmarketBasicPassword');
   }
 }
