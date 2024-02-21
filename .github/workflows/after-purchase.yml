@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lint:
+  run-cmd:
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,4 +23,6 @@ jobs:
         uses: ./.github/actions/install-packages
 
       - name: After purchase
-        run: pnpm start:after-purchase-cmd
+        run: |
+          pnpm build
+          pnpm start:after-purchase-cmd
